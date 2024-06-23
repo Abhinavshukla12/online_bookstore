@@ -1,0 +1,394 @@
+INFO - 2024-06-23 00:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 00:29:39 --> Error: Class "App\Models\UserModel" not found
+[Method: POST, Route: project/register]
+in APPPATH\Controllers\ProjectControllers\AuthController.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 00:29:51 --> Error: Class "App\Models\UserModel" not found
+[Method: POST, Route: project/register]
+in APPPATH\Controllers\ProjectControllers\AuthController.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 00:30:45 --> Error: Class "App\Models\UserModel" not found
+[Method: POST, Route: project/register]
+in APPPATH\Controllers\ProjectControllers\AuthController.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 00:30:58 --> mysqli_sql_exception: Column 'fullname' cannot be null in C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\online_bookstore\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\online_bookstore\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\online_bookstore\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\online_bookstore\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\online_bookstore\app\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\online_bookstore\app\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser(Array)
+#9 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+#10 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+#11 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\online_bookstore\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\online_bookstore\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\online_bookstore\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-06-23 00:30:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+[Method: POST, Route: project/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:30:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$JhzQIEeNKe7Xlxh8FlOHo.oflz/XwPqOSUlVJfIcBar5DKxtEwRle\', \'abhi@gmail.com\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$JhzQIEeNKe7Xlxh8FlOHo.oflz/XwPqOSUlVJfIcBar5DKxtEwRle\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:30:58 --> [Caused by] mysqli_sql_exception: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$JhzQIEeNKe7Xlxh8FlOHo.oflz/XwPqOSUlVJfIcBar5DKxtEwRle\', \'abhi@gmail.com\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$JhzQIEeNKe7Xlxh8FlOHo.oflz/XwPqOSUlVJfIcBar5DKxtEwRle\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$JhzQIEeNKe7Xlxh8FlOHo.oflz/XwPqOSUlVJfIcBar5DKxtEwRle\', \'abhi@gmail.com\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 00:31:08 --> mysqli_sql_exception: Column 'fullname' cannot be null in C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\online_bookstore\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\online_bookstore\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\online_bookstore\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\online_bookstore\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\online_bookstore\app\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\online_bookstore\app\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser(Array)
+#9 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+#10 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+#11 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\online_bookstore\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\online_bookstore\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\online_bookstore\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-06-23 00:31:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+[Method: POST, Route: project/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:31:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$S74iyt1rhkBdDv8ZoLZjdOTIkqT48qDKXUM4j1ipQHJLgPJYvIN66\', \'abhi@gmail.com\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$S74iyt1rhkBdDv8ZoLZjdOTIkqT48qDKXUM4j1ipQHJLgPJYvIN66\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:31:08 --> [Caused by] mysqli_sql_exception: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$S74iyt1rhkBdDv8ZoLZjdOTIkqT48qDKXUM4j1ipQHJLgPJYvIN66\', \'abhi@gmail.com\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$S74iyt1rhkBdDv8ZoLZjdOTIkqT48qDKXUM4j1ipQHJLgPJYvIN66\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$S74iyt1rhkBdDv8ZoLZjdOTIkqT48qDKXUM4j1ipQHJLgPJYvIN66\', \'abhi@gmail.com\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 00:32:56 --> mysqli_sql_exception: Column 'fullname' cannot be null in C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\online_bookstore\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\online_bookstore\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\online_bookstore\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\online_bookstore\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\online_bookstore\app\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\online_bookstore\app\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser(Array)
+#9 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+#10 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+#11 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\online_bookstore\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\online_bookstore\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\online_bookstore\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-06-23 00:32:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+[Method: POST, Route: project/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:32:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$9tximxmY6gaaOUx.oMIuz.d3wlL2v7Hhy/QaX7DZfV.ukum4CGi4q\', \'abhi@gmail.com\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$9tximxmY6gaaOUx.oMIuz.d3wlL2v7Hhy/QaX7DZfV.ukum4CGi4q\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:32:56 --> [Caused by] mysqli_sql_exception: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$9tximxmY6gaaOUx.oMIuz.d3wlL2v7Hhy/QaX7DZfV.ukum4CGi4q\', \'abhi@gmail.com\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$9tximxmY6gaaOUx.oMIuz.d3wlL2v7Hhy/QaX7DZfV.ukum4CGi4q\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$9tximxmY6gaaOUx.oMIuz.d3wlL2v7Hhy/QaX7DZfV.ukum4CGi4q\', \'abhi@gmail.com\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 00:34:10 --> mysqli_sql_exception: Column 'fullname' cannot be null in C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\online_bookstore\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\online_bookstore\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\online_bookstore\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\online_bookstore\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\online_bookstore\app\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\online_bookstore\app\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser(Array)
+#9 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+#10 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+#11 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\online_bookstore\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\online_bookstore\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\online_bookstore\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-06-23 00:34:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+[Method: POST, Route: project/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:34:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$rKs4TV/Mu4sK9Pn3fQzgV.r5qMmzkx2NRpT23funcffri/Q5Ibzfu\', \'abhi@gmail.com\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$rKs4TV/Mu4sK9Pn3fQzgV.r5qMmzkx2NRpT23funcffri/Q5Ibzfu\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:34:10 --> [Caused by] mysqli_sql_exception: Column 'fullname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$rKs4TV/Mu4sK9Pn3fQzgV.r5qMmzkx2NRpT23funcffri/Q5Ibzfu\', \'abhi@gmail.com\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$rKs4TV/Mu4sK9Pn3fQzgV.r5qMmzkx2NRpT23funcffri/Q5Ibzfu\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$rKs4TV/Mu4sK9Pn3fQzgV.r5qMmzkx2NRpT23funcffri/Q5Ibzfu\', \'abhi@gmail.com\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 00:34:37 --> mysqli_sql_exception: Column 'dob' cannot be null in C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\xampp\htdocs\online_bookstore\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\online_bookstore\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\online_bookstore\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\online_bookstore\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\online_bookstore\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\online_bookstore\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\online_bookstore\app\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\online_bookstore\app\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser(Array)
+#9 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+#10 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+#11 C:\xampp\htdocs\online_bookstore\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\online_bookstore\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\online_bookstore\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\online_bookstore\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-06-23 00:34:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'dob' cannot be null
+[Method: POST, Route: project/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:34:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'dob' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$PPq.91imv1PdemE5blmysuiYOQh0IAqIZZin1pnc/YdT9/Z3sbtpa\', \'abhi@gmail.com\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$PPq.91imv1PdemE5blmysuiYOQh0IAqIZZin1pnc/YdT9/Z3sbtpa\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 00:34:37 --> [Caused by] mysqli_sql_exception: Column 'dob' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$PPq.91imv1PdemE5blmysuiYOQh0IAqIZZin1pnc/YdT9/Z3sbtpa\', \'abhi@gmail.com\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$PPq.91imv1PdemE5blmysuiYOQh0IAqIZZin1pnc/YdT9/Z3sbtpa\', \'abhi@gmail.com\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (\'abhi@gmail.com\', \'$2y$10$PPq.91imv1PdemE5blmysuiYOQh0IAqIZZin1pnc/YdT9/Z3sbtpa\', \'abhi@gmail.com\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `email`, `fullname`, `dob`) VALUES (:username:, :password:, :email:, :fullname:, :dob:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ProjectModel\UserModel.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProjectControllers\AuthController.php(35): App\Models\ProjectModel\UserModel->addUser([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\AuthController->processRegister()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 00:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 00:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

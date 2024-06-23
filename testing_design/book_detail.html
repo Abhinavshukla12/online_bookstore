@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Advanced Book Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .book-cover {
+      max-width: 300px;
+      height: auto;
+    }
+    .book-details {
+      margin-top: 20px;
+    }
+    .book-details h2 {
+      font-weight: bold;
+    }
+    .book-details p {
+      margin-bottom: 20px;
+    }
+    .book-actions .btn {
+      margin-right: 10px;
+    }
+    .book-reviews {
+      margin-top: 50px;
+    }
+    .review-item {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .review-item .reviewer-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .review-item .reviewer-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .review-item .review-text {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bookstore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bestsellers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Book Details -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="https://via.placeholder.com/300x450" alt="Book Cover" class="img-fluid book-cover">
+    </div>
+    <div class="col-md-8 book-details">
+      <h2>Book Title</h2>
+      <p><strong>Author:</strong> John Doe</p>
+      <p><strong>Genre:</strong> Fiction</p>
+      <p><strong>Price:</strong> $19.99</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula dolor sit amet felis consectetur, sed lobortis eros accumsan. Proin lobortis dui eget odio egestas malesuada.</p>
+      <div class="book-actions">
+        <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        <button class="btn btn-secondary"><i class="fas fa-heart"></i> Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Book Reviews -->
+<div class="container mt-5 book-reviews">
+  <h3>Customer Reviews</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="review-item">
+        <div class="reviewer-info">
+          <img src="https://via.placeholder.com/50" alt="Reviewer Avatar" class="reviewer-avatar">
+          <div>
+            <h5>Reviewer 1</h5>
+            <p>5 stars</p>
+          </div>
+        </div>
+        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula dolor sit amet felis consectetur, sed lobortis eros accumsan.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="review-item">
+        <div class="reviewer-info">
+          <img src="https://via.placeholder.com/50" alt="Reviewer Avatar" class="reviewer-avatar">
+          <div>
+            <h5>Reviewer 2</h5>
+            <p>4 stars</p>
+          </div>
+        </div>
+        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula dolor sit amet felis consectetur, sed lobortis eros accumsan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">&copy; 2024 Bookstore. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and Font Awesome JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
