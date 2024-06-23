@@ -5,55 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="<?= csrf_hash() ?>">
-    <title>IMS</title>
+    <title>Bookstore</title>
     <!-- font awesome link -->
-    <link href="<?= base_url('node_modules/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link href="<?= base_url('node_modules/bootstrap/dist/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Bootswatch CSS -->
-    <link href="<?= base_url('node_modules/bootswatch/dist/zephyr/bootstrap.min.css') ?>" rel="stylesheet">
-    <!--custom css-->
-
+    <link href="<?= base_url('node_modules/bootswatch/dist/morph/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Load custom CSS -->
     
-    <style>
-    /* General Navbar Styling */
-.navbar {
-    background-color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Brand Styling */
-.navbar-brand {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: black;
-}
-
-/* Nav Link Styling */
-.navbar-nav .nav-link {
-    color: white;
-    font-size: 14px;
-    font-weight: bolder;
-    text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: black;
-    background-color: #4a7375;
-    border-radius: 4px;
-}
-</style>
     <!-- Bootstrap css -->
     <?php
     if (isset($css)) {
@@ -65,74 +25,87 @@
 </head>
 
 <body>
-<!-- Primary Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="<?=base_url('project/home')?>">Factory Management System</a> <!-- Navbar Brand -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('project/home')?>">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('')?>">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('')?>">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('project/profile')?>">Profile</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-<!-- Secondary Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Stocks Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Sales Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Purchase Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Item Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Supplier Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Document Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Warehouse Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('')?>">Settings</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('project/logout')?>">Logout</a>
-            </li>
-        </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="<?=base_url('project/home')?>">Bookstore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="<?=base_url('project/home')?>">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="auther.html">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bestseller.html">Bestsellers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bestseller.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bestseller.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=base_url('project/logout')?>">Logout</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
-
-
-
 
     <!-- the main content goes here -->
     <div class="container">
         <?= $this->renderSection('content') ?>
     </div>
 
-    <script src="<?= base_url('node_modules/jquery/dist/jquery.min.js') ?>"></script>
-  <!-- Bootstrap JS and dependencies -->
-  <script src="<?= base_url('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+
+    <!-- Footer -->
+<footer class="text-center py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>Information about the bookstore.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="<?=base_url('project/home')?>">Home</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Authors</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Bestsellers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <a href="#"><i class="fab fa-facebook fa-2x mr-3"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x mr-3"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <p>&copy; 2024 Bookstore Software</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Bootstrap JS, Font Awesome JS, and Custom JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <!-- jQuery, Popper.js, and Bootstrap JS -->
