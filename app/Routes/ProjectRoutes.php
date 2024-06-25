@@ -13,7 +13,20 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     $routes->get('logout', 'AuthController::logout');
     $routes->get('profile', 'AuthController::profile');
 
-    //home route
+    // Home route
     $routes->get('home', 'DashboardController::index');
+
+    // Books routes
+    $routes->get('books', 'BookController::index');
+    $routes->get('books/view/(:segment)', 'BookController::view/$1');
+
+    // Reviews route
+    $routes->post('reviews/add', 'ReviewController::add');
+
+    // Orders routes
+    $routes->get('orders', 'OrderController::index');
+    
+    // Payment route
+    $routes->get('orders/payment/(:num)', 'OrderController::payment/$1');
 });
 //routes end

@@ -9,8 +9,7 @@
     <h1 class="jumbotron-heading">Welcome to Bookstore</h1>
     <p class="lead">Discover the best books, eBooks, and audiobooks.</p>
     <p>
-      <a href="#" class="btn btn-primary my-2">Shop Now</a>
-      <a href="#" class="btn btn-secondary my-2">Learn More</a>
+      <a href="<?= site_url('project/books') ?>" class="btn btn-primary my-2">Shop Now</a>
     </p>
   </div>
 </section>

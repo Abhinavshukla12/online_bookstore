@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="<?= csrf_hash() ?>">
     <title>Bookstore</title>
-    <!-- font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link href="<?= base_url('node_modules/bootstrap/dist/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Bootswatch CSS -->
-    <link href="<?= base_url('node_modules/bootswatch/dist/morph/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('node_modules/bootswatch/dist/lux/bootstrap.min.css') ?>" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="<?= base_url('node_modules/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
+
     <!-- Load custom CSS -->
     
     <!-- Bootstrap css -->
@@ -28,7 +29,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="<?=base_url('project/home')?>">Bookstore</a>
+    <a class="navbar-brand" href="<?=base_url('project/home')?>">E-book cluB</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,16 +39,10 @@
           <a class="nav-link" href="<?=base_url('project/home')?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="books.html">Books</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="auther.html">Authors</a>
+          <a class="nav-link" href="<?=base_url('project/books')?>">Books</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="categories.html">Categories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bestseller.html">Bestsellers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="bestseller.html">About</a>
@@ -81,10 +76,8 @@
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="<?=base_url('project/home')?>">Home</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Authors</a></li>
+          <li><a href="<?=base_url('project/books')?>">Books</a></li>
           <li><a href="#">Categories</a></li>
-          <li><a href="#">Bestsellers</a></li>
         </ul>
       </div>
       <div class="col-md-4">
