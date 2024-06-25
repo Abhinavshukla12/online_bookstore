@@ -42,7 +42,7 @@
           <a class="nav-link" href="<?=base_url('project/books')?>">Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="categories.html">Categories</a>
+          <a class="nav-link" href="<?=base_url('project/categories')?>">Categories</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="bestseller.html">About</a>

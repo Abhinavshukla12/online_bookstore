@@ -2,10 +2,13 @@
 
 namespace Config;
 
+use CodeIgniter\Router\RouteCollection;
+use CodeIgniter\Router\RouteGroup;
+
 $routes = Services::routes();
 
-//routes start
 $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers'], static function ($routes) {
+    // Authentication routes
     $routes->get('register', 'AuthController::register');
     $routes->post('register', 'AuthController::processRegister');
     $routes->get('login', 'AuthController::login');
@@ -13,7 +16,7 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     $routes->get('logout', 'AuthController::logout');
     $routes->get('profile', 'AuthController::profile');
 
-    // Home route
+    // Dashboard route
     $routes->get('home', 'DashboardController::index');
 
     // Books routes
@@ -28,5 +31,8 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     
     // Payment route
     $routes->get('orders/payment/(:num)', 'OrderController::payment/$1');
+
+    // Categories routes
+    $routes->get('categories', 'BookController::categories');
+    $routes->get('category/(:num)', 'BookController::category/$1');
 });
-//routes end

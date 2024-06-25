@@ -8,7 +8,7 @@
     </div>
 <?php endif; ?>
 
-<h3 class="mb-3">Bestsellers-></h3>
+<h3 class="mb-3">Bestsellers</h3>
 <div class="table-responsive mb-5">
     <table class="table table-hover table-secondary">
         <thead>
@@ -38,7 +38,7 @@
     </table>
 </div>
 
-<h3 class="mb-3">All Books-></h3>
+<h3 class="mb-3">All Books</h3>
 <div class="table-responsive">
     <table class="table table-hover table-secondary">
         <thead>
@@ -67,4 +67,5 @@
         </tbody>
     </table>
 </div>
+
 <?= $this->endSection() ?>
