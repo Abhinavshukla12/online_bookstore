@@ -29,7 +29,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="<?=base_url('project/home')?>">E-book cluB</a>
+    <a class="navbar-brand" href="<?=base_url('project/home')?>"><h2>E-book cluB</h2></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,10 +45,7 @@
           <a class="nav-link" href="<?=base_url('project/categories')?>">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="bestseller.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bestseller.html">Contact Us</a>
+          <a class="nav-link" href="<?=base_url('project/about')?>">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=base_url('project/logout')?>">Logout</a>
