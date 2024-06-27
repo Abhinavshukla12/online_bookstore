@@ -57,33 +57,10 @@
             <div class="card-footer">
               <h6>User Reviews:</h6>
               <?php foreach ($book['latest_reviews'] as $review): ?>
-                <p><strong><?= esc($review['user_id']) ?>:</strong> <?= esc($review['comment']) ?></p>
+                <p><?= esc($review['comment']) ?></p>
               <?php endforeach; ?>
             </div>
           <?php endif; ?>
-        </div>
-      </div>
-    <?php endforeach; ?>
-  </div>
-</div>
-
-<!-- User Reviews -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">User Reviews</h2>
-  <div class="row">
-    <?php foreach ($userReviews as $review): ?>
-      <div class="col-md-6 mb-4">
-        <div class="media shadow-sm p-3 rounded">
-          <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="User">
-          <div class="media-body">
-            <h5 class="mt-0"><?= esc($review['user_id']) ?></h5>
-            <p><?= esc($review['comment']) ?></p>
-            <p class="card-text">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <i class="fas fa-star<?= $i < $review['rating'] ? ' text-warning' : '' ?>"></i>
-              <?php endfor; ?>
-            </p>
-          </div>
         </div>
       </div>
     <?php endforeach; ?>
