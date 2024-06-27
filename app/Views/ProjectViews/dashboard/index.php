@@ -1,12 +1,12 @@
-<!-- app/Views/home.php -->
-
 <?= $this->extend('ProjectViews/layout/default') ?>
+
 <?= $this->section('content') ?>
-<body style="background-color: #f2f2f2;">
+<body>
+
 <!-- Hero Section -->
-<section class="jumbotron text-center">
+<section class="jumbotron text-center" style="background-image: url('<?= base_url('assets/images/hero/h2.jpg') ?>'); background-size: cover; background-position: center; color: white;">
   <div class="container">
-    <h1 class="jumbotron-heading">Welcome to Bookstore</h1>
+    <h1 class="jumbotron-heading text-white">Welcome to Bookstore</h1>
     <p class="lead">Discover the best books, eBooks, and audiobooks.</p>
     <p>
       <a href="<?= site_url('project/books') ?>" class="btn btn-primary my-2">Shop Now</a>
@@ -14,85 +14,22 @@
   </div>
 </section>
 
-<!-- Featured Books Carousel -->
-<div id="featuredBooksCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Featured Book Title 1</h5>
-        <p>Short description of the featured book.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Featured Book Title 2</h5>
-        <p>Short description of the featured book.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Featured Book Title 3</h5>
-        <p>Short description of the featured book.</p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#featuredBooksCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#featuredBooksCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
 <!-- Book Categories -->
 <div class="container my-5">
   <h2 class="text-center mb-4">Explore Categories</h2>
   <div class="row">
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Fiction</h5>
-          <p class="card-text">Explore a wide range of fiction books.</p>
-          <a href="#" class="btn btn-primary">Explore</a>
+    <?php foreach ($categories as $category): ?>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="<?= esc($category['name']) ?>">
+          <div class="card-body">
+            <h5 class="card-title"><?= esc($category['name']) ?></h5>
+            <p class="card-text"><?= esc($category['description']) ?></p>
+            <a href="<?= site_url('project/category/' . $category['id']) ?>" class="btn btn-primary">Explore</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Non-Fiction</h5>
-          <p class="card-text">Discover non-fiction books on various topics.</p>
-          <a href="#" class="btn btn-primary">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Science Fiction</h5>
-          <p class="card-text">Dive into the world of science fiction.</p>
-          <a href="#" class="btn btn-primary">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Romance</h5>
-          <p class="card-text">Feel the love with romance novels.</p>
-          <a href="#" class="btn btn-primary">Explore</a>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 </div>
 
@@ -100,74 +37,33 @@
 <div class="container my-5">
   <h2 class="text-center mb-4">Bestsellers</h2>
   <div class="row">
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bestseller Title 1</h5>
-          <p class="card-text">Brief description of the bestseller.</p>
-          <p class="card-text">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star-half-alt text-warning"></i>
-          </p>
-          <a href="#" class="btn btn-primary">View Details</a>
+    <?php foreach ($bestsellers as $book): ?>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="<?= esc($book['image']) ?>" class="card-img-top" alt="<?= esc($book['title']) ?>">
+          <div class="card-body">
+            <h5 class="card-title"><?= esc($book['title']) ?></h5>
+            <p class="card-text"><?= esc($book['description']) ?></p>
+            <?php if ($book['avg_rating'] !== null): ?>
+              <p class="card-text">
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                  <i class="fas fa-star<?= $i <= $book['avg_rating'] ? ' text-warning' : '-half-alt text-warning' ?>"></i>
+                <?php endfor; ?>
+              </p>
+            <?php endif; ?>
+            <a href="<?= site_url('project/books/view/'.$book['id']) ?>" class="btn btn-primary">View Details</a>
+          </div>
+          <?php if (count($book['latest_reviews']) > 0): ?>
+            <div class="card-footer">
+              <h6>User Reviews:</h6>
+              <?php foreach ($book['latest_reviews'] as $review): ?>
+                <p><strong><?= esc($review['user_id']) ?>:</strong> <?= esc($review['comment']) ?></p>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bestseller Title 2</h5>
-          <p class="card-text">Brief description of the bestseller.</p>
-          <p class="card-text">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star-half-alt text-warning"></i>
-          </p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bestseller Title 3</h5>
-          <p class="card-text">Brief description of the bestseller.</p>
-          <p class="card-text">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star-half-alt text-warning"></i>
-          </p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bestseller Title 4</h5>
-          <p class="card-text">Brief description of the bestseller.</p>
-          <p class="card-text">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star-half-alt text-warning"></i>
-          </p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 </div>
 
@@ -175,42 +71,22 @@
 <div class="container my-5">
   <h2 class="text-center mb-4">User Reviews</h2>
   <div class="row">
-    <div class="col-md-6 mb-4">
-      <div class="media shadow-sm p-3 rounded">
-        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">User Name 1</h5>
-          <p>User review text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <?php foreach ($userReviews as $review): ?>
+      <div class="col-md-6 mb-4">
+        <div class="media shadow-sm p-3 rounded">
+          <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="User">
+          <div class="media-body">
+            <h5 class="mt-0"><?= esc($review['user_id']) ?></h5>
+            <p><?= esc($review['comment']) ?></p>
+            <p class="card-text">
+              <?php for ($i = 0; $i < 5; $i++): ?>
+                <i class="fas fa-star<?= $i < $review['rating'] ? ' text-warning' : '' ?>"></i>
+              <?php endfor; ?>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="media shadow-sm p-3 rounded">
-        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">User Name 2</h5>
-          <p>User review text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="media shadow-sm p-3 rounded">
-        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">User Name 3</h5>
-          <p>User review text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="media shadow-sm p-3 rounded">
-        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">User Name 4</h5>
-          <p>User review text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 </div>
 
@@ -227,5 +103,6 @@
     </form>
   </div>
 </div>
+
 </body>
 <?= $this->endSection() ?>
