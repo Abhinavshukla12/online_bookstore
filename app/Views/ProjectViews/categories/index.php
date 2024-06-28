@@ -16,13 +16,13 @@
     }
 
     .custom-card .card-title a {
-        color: #007bff; /* Blue link color */
+        color: black; /* Blue link color */
         text-decoration: none; /* Remove underline */
         transition: color 0.3s ease-in-out;
     }
 
     .custom-card .card-title a:hover {
-        color: #0056b3; /* Darker blue on hover */
+        color: red; /* Darker blue on hover */
     }
 
     .custom-card .card-text {
@@ -42,11 +42,11 @@
 
 <div class="row">
     <?php foreach ($categories as $category) : ?>
-        <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card custom-card" style="background-color: #e9ecef;">
+        <div class="col-md-4 col-lg-6 mb-4">
+            <div class="card custom-card" style="background-color: #facbc8;">
                 <div class="card-body">
                     <h5 class="card-title"><a href="<?= site_url('project/category/' . $category['id']) ?>"><?= esc($category['name']) ?></a></h5>
-                    <p class="card-text text-muted"><?= esc($category['description']) ?></p>
+                    <p class="card-text text-primary-emphasis"><?= esc($category['description']) ?></p>
                 </div>
             </div>
         </div>
