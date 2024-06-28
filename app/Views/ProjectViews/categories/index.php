@@ -42,7 +42,7 @@
 
 <div class="row">
     <?php foreach ($categories as $category) : ?>
-        <div class="col-md-4 col-lg-6 mb-4">
+        <div class="col-md-3 col-lg-3 mb-4">
             <div class="card custom-card" style="background-color: #facbc8;">
                 <div class="card-body">
                     <h5 class="card-title"><a href="<?= site_url('project/category/' . $category['id']) ?>"><?= esc($category['name']) ?></a></h5>

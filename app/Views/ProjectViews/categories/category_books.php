@@ -54,7 +54,9 @@
                             <h5 class="card-title"><?= esc($book['title']) ?></h5>
                             <p class="card-text text-primary-emphasis"><?= esc($book['description']) ?></p>
                             <p class="card-text text-primary-emphasis"><strong>Author:</strong> <?= esc($book['author']) ?></p>
-                            <p class="card-text text-primary-emphasis"><strong>Price:</strong> <?= esc($book['price']) ?></p>
+                            <p class="card-text text-primary-emphasis"><strong>Price:</strong> $<?= esc($book['price']) ?></p>
+                            <p class="card-text text-primary-emphasis"><strong>Rating:</strong> <?= number_format($book['averageRating'], 1) ?> / 5</p>
+                            <a href="<?= site_url('project/books/view/'.$book['id']) ?>" class="btn btn-danger btn-sm">View</a>
                         </div>
                     </div>
                 </div>
@@ -64,6 +66,7 @@
 </div>
 
 <div class="mb-3">
-        <a href="<?= base_url('project/categories') ?>" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Categories</a>
-    </div>
+    <a href="<?= base_url('project/categories') ?>" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Categories</a>
+</div>
+
 <?= $this->endSection() ?>

@@ -3,52 +3,82 @@
 <?= $this->section('content') ?>
 
 <style>
-    /* Custom styles (same as before) */
+    /* Custom styles */
     .book-section {
-        /* Styles for book section */
+        background-color: #f9f9f9; /* Light background for book section */
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .book-section:hover {
+        background-color: #f0f0f0; /* Darker background on hover */
     }
 
     .book-title {
-        /* Styles for book title */
+        font-size: 1.8rem;
+        color: #333;
     }
 
     .book-details {
-        /* Styles for book details */
+        padding: 20px;
     }
 
     .btn-purchase {
-        /* Styles for purchase button */
+        border-radius: 6px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-purchase:hover {
+        transform: scale(1.05); /* Scale up on hover */
     }
 
     .review-section {
-        /* Styles for review section */
+        background-color: #fff; /* White background for review section */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .review-title {
-        /* Styles for review title */
+        font-size: 1.6rem;
+        color: #333;
     }
 
     .review-list {
-        /* Styles for review list */
+        margin-top: 10px;
     }
 
     .list-group-item {
-        /* Styles for list group item */
+        border: none;
+        padding: 12px;
     }
 
     .add-review-section {
-        /* Styles for add review section */
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9; /* Light background for add review section */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-show-more {
-        /* Styles for show more button */
+    .btn-show-more,
+    .btn-show-less {
+        margin-top: 10px;
+    }
+
+    .average-rating {
+        font-size: 1.5rem;
+        color: #333;
+        margin-top: 10px;
     }
 </style>
 
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <!-- Book Section -->
             <div class="book-section">
                 <h2 class="book-title"><?= esc($book['title']) ?></h2>
 
@@ -61,6 +91,7 @@
                             <p><strong>Author:</strong> <?= esc($book['author']) ?></p>
                             <p><strong>Description:</strong> <?= esc($book['description']) ?></p>
                             <p><strong>Price:</strong> $<?= esc($book['price']) ?></p>
+                            <p class="average-rating"><h4>Rating:</h4> <?= number_format($averageRating, 1) ?> / 5</p>
                             <a href="<?= site_url('project/orders/payment/' . $book['id']) ?>" class="btn btn-success btn-purchase">Purchase</a>
                         </div>
                     </div>
@@ -68,7 +99,6 @@
             </div>
         </div>
         <div class="col-md-4">
-            <!-- Review Section -->
             <div class="review-section">
                 <h3 class="review-title">Reviews</h3>
                 <?php if (session()->getFlashdata('success')): ?>
@@ -83,7 +113,7 @@
                     <ul class="list-group review-list">
                         <?php $reviewCount = 0; ?>
                         <?php foreach ($reviews as $review): ?>
-                            <?php if ($reviewCount < 2): ?>
+                            <?php if ($reviewCount < 3): ?>
                                 <li class="list-group-item">
                                     <strong>Rating:</strong>
                                     <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -101,9 +131,9 @@
                             <?php $reviewCount++; ?>
                         <?php endforeach; ?>
                     </ul>
-                    <?php if (count($reviews) > 2): ?>
+                    <?php if (count($reviews) > 3): ?>
                         <button class="btn btn-secondary btn-show-more mt-3">Show More</button>
-                        <ul class="list-group review-list mt-3" style="display: none;">
+                        <ul class="list-group review-list mt-3 d-none">
                             <?php foreach (array_slice($reviews, 3) as $review): ?>
                                 <li class="list-group-item">
                                     <strong>Rating:</strong>
@@ -120,11 +150,11 @@
                                 </li>
                             <?php endforeach; ?>
                         </ul>
+                        <button class="btn btn-secondary btn-show-less mt-3 d-none">Show Less</button>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
 
-            <!-- Add Review Section (same as before) -->
             <div class="add-review-section">
                 <h4 class="mb-3">Add a Review</h4>
                 <form action="<?= site_url('project/reviews/add') ?>" method="post">
@@ -150,20 +180,27 @@
         </div>
     </div>
 
-    <!-- Back Button (same as before) -->
     <a href="<?= site_url('project/books') ?>" class="btn btn-secondary mt-4">Back to Books Page</a>
 </div>
 
 <script>
-    // JavaScript to toggle visibility of additional reviews on "Show More" button click
+    // JavaScript to toggle visibility of additional reviews on "Show More" and "Show Less" button clicks
     document.addEventListener('DOMContentLoaded', function() {
         const showMoreButton = document.querySelector('.btn-show-more');
+        const showLessButton = document.querySelector('.btn-show-less');
         const hiddenReviewList = document.querySelector('.review-section .review-list:nth-of-type(2)');
 
-        if (showMoreButton && hiddenReviewList) {
+        if (showMoreButton && hiddenReviewList && showLessButton) {
             showMoreButton.addEventListener('click', function() {
-                hiddenReviewList.style.display = 'block';
-                showMoreButton.style.display = 'none';
+                hiddenReviewList.classList.remove('d-none');
+                showMoreButton.classList.add('d-none');
+                showLessButton.classList.remove('d-none');
+            });
+
+            showLessButton.addEventListener('click', function() {
+                hiddenReviewList.classList.add('d-none');
+                showMoreButton.classList.remove('d-none');
+                showLessButton.classList.add('d-none');
             });
         }
     });
