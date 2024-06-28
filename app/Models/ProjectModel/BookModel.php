@@ -21,4 +21,13 @@ class BookModel extends Model
     {
         return $this->where('category_id', $categoryId)->findAll();
     }
+
+    // Add method to search books
+    public function searchBooks($query)
+    {
+        return $this->like('title', $query)
+                    ->orLike('author', $query)
+                    ->orLike('description', $query)
+                    ->findAll();
+    }
 }
