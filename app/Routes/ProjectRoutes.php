@@ -36,6 +36,7 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     $routes->get('categories', 'BookController::categories');
     $routes->get('category/(:num)', 'BookController::category/$1');
 
+
     // About routes
     $routes->get('about', 'AboutController::index');
 });

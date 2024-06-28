@@ -55,29 +55,39 @@ class BookController extends BaseController
 
     public function categories()
     {
-        $categoryModel = new CategoryModel();
-        $categories = $categoryModel->findAll();
+        // Check if user is logged in
+        if (!session()->has('user')) {
+            return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+        }
 
-        return view('ProjectViews/books/categories', [
-            'categories' => $categories
+        $categoryModel = new CategoryModel(); // Create an instance of CategoryModel
+        $categories = $categoryModel->findAll(); // Fetch all categories
+
+        return view('ProjectViews/categories/index', [
+            'categories' => $categories // Pass categories to the view
         ]);
     }
 
-    public function category($categoryId)
+    public function category($id)
     {
-        $bookModel = new BookModel();
-        $categoryModel = new CategoryModel();
-
-        $books = $bookModel->getBooksByCategory($categoryId);
-        $category = $categoryModel->find($categoryId);
-
+        // Check if user is logged in
+        if (!session()->has('user')) {
+            return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+        }
+    
+        $categoryModel = new CategoryModel(); // Create an instance of CategoryModel
+        $bookModel = new BookModel(); // Create an instance of BookModel
+    
+        $category = $categoryModel->find($id);
         if (!$category) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Category not found');
         }
-
-        return view('ProjectViews/books/categories', [
-            'books' => $books,
-            'category' => $category
+    
+        $books = $bookModel->getBooksByCategory($id); // Get books by category ID
+    
+        return view('ProjectViews/categories/category_books', [
+            'category' => $category,
+            'books' => $books // Pass books to the view
         ]);
-    }
+    }    
 }
