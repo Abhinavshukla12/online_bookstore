@@ -41,4 +41,9 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
 
     //Search routes
     $routes->get('search', 'SearchController::index');
+
+    //Cart routes
+    $routes->get('cart', 'CartController::index');
+    $routes->post('cart/add', 'CartController::addToCart');
+    $routes->post('cart/remove', 'CartController::removeFromCart');
 });
