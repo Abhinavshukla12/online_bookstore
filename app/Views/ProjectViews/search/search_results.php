@@ -56,6 +56,10 @@
                             <p><?= esc($book['description']) ?></p>
                             <p class="average-rating"><strong>Rating:</strong> <?= number_format($book['averageRating'], 1) ?> / 5</p>
                             <a href="<?= site_url('project/books/view/'.$book['id']) ?>" class="btn btn-danger btn-sm">View</a>
+                            <form action="<?= site_url('project/cart/add') ?>" method="post" class="d-inline">
+                                <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
+                                <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
+                            </form>
                         </div>
                     <?php endforeach; ?>
                 </div>

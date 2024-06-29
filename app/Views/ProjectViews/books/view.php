@@ -93,6 +93,10 @@
                             <p><strong>Price:</strong> $<?= esc($book['price']) ?></p>
                             <p class="average-rating"><h4>Rating:</h4> <?= number_format($averageRating, 1) ?> / 5</p>
                             <a href="<?= site_url('project/orders/payment/' . $book['id']) ?>" class="btn btn-success btn-purchase">Purchase</a>
+                            <form action="<?= site_url('project/cart/add') ?>" method="post" class="d-inline">
+                                <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
+                                <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>

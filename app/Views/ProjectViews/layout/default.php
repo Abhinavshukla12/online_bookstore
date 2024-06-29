@@ -18,38 +18,37 @@
 
     <style>
       /* Custom CSS for resizing navbar */
-.navbar {
-    padding: 0.5rem 1rem;
-}
+      .navbar {
+          padding: 0.5rem 1rem;
+      }
 
-.navbar-brand {
-    margin-left: 20px;
-}
+      .navbar-brand {
+          margin-left: 20px;
+      }
 
-.navbar-brand h2 {
-    font-size: 1.5rem;
-}
+      .navbar-brand h2 {
+          font-size: 1.5rem;
+      }
 
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-}
+      .navbar-nav .nav-link {
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+          white-space: nowrap;
+      }
 
-.form-inline .form-control {
-    padding: 0.5rem;
-}
+      .form-inline .form-control {
+          padding: 0.5rem;
+      }
 
-.form-inline .btn {
-    padding: 0.5rem 1rem;
-}
+      .form-inline .btn {
+          padding: 0.5rem 1rem;
+      }
 
-.form-inline {
-    margin-right: 20px;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
+      .form-inline {
+          margin-right: 20px;
+          flex-grow: 1;
+          justify-content: flex-end;
+      }
     </style>
     <?php
     if (isset($css)) {
@@ -82,9 +81,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?=base_url('project/about')?>">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('project/profile')?>">Your Profile</a>
-                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto" method="get" action="<?= base_url('project/search') ?>" style="margin-right: 20px;">
                 <div class="input-group">
@@ -96,6 +92,22 @@
                     </div>
                 </div>
             </form>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Your Profile
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="<?=base_url('project/profile')?>">My Profile</a>
+                            <a class="dropdown-item" href="<?=base_url('project/cart')?>">Cart</a>
+                            <a class="dropdown-item" href="<?=base_url('')?>">Orders</a>
+                            <a class="dropdown-item" href="#">Wishlist</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?=base_url('project/logout')?>">Logout</a>
+                        </div>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
