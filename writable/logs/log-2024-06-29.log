@@ -453,3 +453,263 @@ INFO - 2024-06-29 16:47:05 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-29 16:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-29 16:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-29 16:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 16:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 16:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 16:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 16:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:01:25 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/books]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/books/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\BookController.php(51): view('ProjectViews/books/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\BookController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\BookController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:03:27 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/books]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/books/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\BookController.php(51): view('ProjectViews/books/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\BookController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\BookController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:03:29 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/books]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/books/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\BookController.php(51): view('ProjectViews/books/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\BookController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\BookController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:29 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:37 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:39 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:40 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:54 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:04:55 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:06:15 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:06:17 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:06:18 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 65.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-29 17:06:49 --> ErrorException: Undefined variable $user
+[Method: GET, Route: project/home]
+in APPPATH\Views\ProjectViews\layout\default.php on line 59.
+ 1 APPPATH\Views\ProjectViews\layout\default.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\online_bookstore\\app\\Views\\ProjectViews\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('ProjectViews/layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ProjectViews/dashboard/index', [], true)
+ 6 APPPATH\Controllers\ProjectControllers\DashboardController.php(38): view('ProjectViews/dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectControllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectControllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-29 17:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:28 --> User found in getUserByUsername: abhinav1828
+INFO - 2024-06-29 17:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-29 17:20:36 --> User not found in getUserByUsername: bhumsish123
+INFO - 2024-06-29 17:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-29 17:20:39 --> User not found in getUserByUsername: prabha45
+INFO - 2024-06-29 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:03 --> User added successfully.
+INFO - 2024-06-29 17:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:06 --> User found in getUserByUsername: bhumsish123
+INFO - 2024-06-29 17:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-29 17:21:24 --> User found in getUserByUsername: bhumsish123
+INFO - 2024-06-29 17:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

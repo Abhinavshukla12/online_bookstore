@@ -52,16 +52,15 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0 ml-auto" method="get" action="<?= base_url('project/search') ?>" style="width: 100%;">
-  <div class="input-group" style="width: 100%;">
-    <input class="form-control" type="search" placeholder="Search books" aria-label="Search" name="query" style="background-color: #c1c7c3; width: 80%; padding: 5px; font-size: 15px;">
-    <div class="input-group-append" style="width: 20%;">
-      <button class="btn btn-danger w-100" type="submit" style="padding: 5px; font-size: 14px;">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  </div>
-</form>
-
+        <div class="input-group" style="width: 100%;">
+          <input class="form-control" type="search" placeholder="Search books" aria-label="Search" name="query" style="background-color: #c1c7c3; width: 80%; padding: 5px; font-size: 15px;">
+          <div class="input-group-append" style="width: 20%;">
+            <button class="btn btn-danger w-100" type="submit" style="padding: 5px; font-size: 14px;">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </nav>

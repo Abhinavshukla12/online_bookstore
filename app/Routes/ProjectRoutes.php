@@ -46,4 +46,7 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     $routes->get('cart', 'CartController::index');
     $routes->post('cart/add', 'CartController::addToCart');
     $routes->post('cart/remove', 'CartController::removeFromCart');
+
+    //Profie routes
+    $routes->get('profile', 'AuthController::profile');
 });
