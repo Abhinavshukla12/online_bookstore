@@ -1,12 +1,12 @@
 <?= $this->extend('ProjectViews/layout/default') ?>
 
 <?= $this->section('content') ?>
-<div class="container mt-4">
+<div class="container shift-left mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">User Profile</h4>
+                    <h4 class="mb-0">My Profile</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
