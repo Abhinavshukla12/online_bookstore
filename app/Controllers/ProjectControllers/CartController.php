@@ -51,4 +51,21 @@ class CartController extends Controller
         // Redirect back to the cart page or wherever appropriate
         return redirect()->back()->with('success', 'Item removed from cart successfully.');
     }
+
+    public function buy()
+    {
+        // Redirect to the payment page
+        return view('ProjectViews/cart/cart_payment');
+    }
+
+    public function processPayment()
+    {
+        // Simulate processing of payment (replace with actual payment gateway integration)
+        // For demonstration, assume payment was successful
+        
+        // You would typically have logic here to interact with a payment gateway
+        
+        // Redirect to the success page after payment
+        return view('ProjectViews/cart/cart_success');
+    }
 }

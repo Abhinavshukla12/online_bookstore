@@ -26,12 +26,6 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     // Reviews route
     $routes->post('reviews/add', 'ReviewController::add');
 
-    // Orders routes
-    $routes->get('orders', 'OrderController::index');
-    
-    // Payment route
-    $routes->get('orders/payment/(:num)', 'OrderController::payment/$1');
-
     // Categories routes
     $routes->get('categories', 'BookController::categories');
     $routes->get('category/(:num)', 'BookController::category/$1');
@@ -46,7 +40,10 @@ $routes->group('project/', ['namespace' => 'App\Controllers\ProjectControllers']
     $routes->get('cart', 'CartController::index');
     $routes->post('cart/add', 'CartController::addToCart');
     $routes->post('cart/remove', 'CartController::removeFromCart');
-
+    $routes->post('cart/buy', 'CartController::buy');
+    $routes->get('cart/payment', 'CartController::payment');
+    $routes->post('cart/processPayment', 'CartController::processPayment');
+    
     //Profie routes
     $routes->get('profile', 'AuthController::profile');
 });
