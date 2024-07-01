@@ -17,7 +17,7 @@ class AuthController extends BaseController
 
     public function register()
     {
-        return view('ProjectViews/auth/register');
+        return view('ProjectViews/auth/auth_index');
     }
 
     public function processRegister()
@@ -41,7 +41,7 @@ class AuthController extends BaseController
 
     public function login()
     {
-        return view('ProjectViews/auth/login');
+        return view('ProjectViews/auth/auth_index');
     }
 
     public function processLogin()
@@ -58,7 +58,7 @@ class AuthController extends BaseController
             $this->session->set('user', $user); // Save user details in session
             return redirect()->to(site_url('project/home'))->with('success', 'Login successful!');
         } else {
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password!');
+            return redirect()->back()->withInput()->with('error', 'Something went wrong!');
         }
     }
 
