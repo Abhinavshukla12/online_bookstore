@@ -10,6 +10,10 @@ class CartController extends Controller
 {
     public function index()
     {
+        // Check if user is logged in
+    if (!session()->has('user')) {
+        return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+    }
         // Load the CartModel
         $cartModel = new CartModel();
 
@@ -28,6 +32,10 @@ class CartController extends Controller
 
     public function addToCart()
     {
+        // Check if user is logged in
+    if (!session()->has('user')) {
+        return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+    }
         // Handle adding items to the cart
         $bookId = $this->request->getPost('book_id');
 
@@ -41,6 +49,10 @@ class CartController extends Controller
 
     public function removeFromCart()
     {
+        // Check if user is logged in
+    if (!session()->has('user')) {
+        return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+    }
         // Handle removing items from the cart
         $cartId = $this->request->getPost('cart_id');
 
@@ -54,6 +66,10 @@ class CartController extends Controller
 
     public function buy()
     {
+        // Check if user is logged in
+    if (!session()->has('user')) {
+        return redirect()->to(site_url('project/login'))->with('error', 'Please login to access the dashboard.');
+    }
         // Redirect to the payment page
         return view('ProjectViews/cart/cart_payment');
     }
