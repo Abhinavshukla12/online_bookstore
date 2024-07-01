@@ -6,7 +6,7 @@
 
 <h3 class="mb-3">Payment</h3>
 
-<form action="<?= site_url('project/cart/cart_success') ?>" method="post">
+<form action="<?= site_url('project/processPayment') ?>" method="post">
     <div class="form-group">
         <label for="cardNumber">Card Number</label>
         <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
