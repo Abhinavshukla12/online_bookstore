@@ -2,23 +2,23 @@
 
 <?= $this->section('content') ?>
 <body>
-
 <!-- Hero Section -->
-<section class="jumbotron text-center" style="background-image: url('<?= base_url('assets/images/hero/h2.jpg') ?>'); background-size: cover; background-position: center; color: white;">
-  <div class="container">
-    <h1 class="jumbotron-heading text-white">Welcome to Bookstore</h1>
-    <p class="lead">Discover the best books, eBooks, and audiobooks.</p>
-    <p>
-      <a href="<?= site_url('project/books') ?>" class="btn btn-primary my-2">Shop Now</a>
-    </p>
-  </div>
-</section>
+<header class="banner">
+        <div class="banner-content">
+            <h1>Welcome to Our Bookstore</h1>
+            <p>Discover a world of books at your fingertips.</p>
+            <div class="banner-buttons">
+                <a href="<?=base_url('project/categories')?>" class="btn explore-btn"><span>See categories..</span></a>
+                <a href="<?=base_url('project/books')?>" class="btn shop-btn"><span>Shop Now...</span></a>
+            </div>
+        </div>
+    </header>
 
 <!-- Book Categories -->
 <div class="container my-5">
   <h2 class="text-center mb-4">Explore Categories</h2>
   <div class="row">
-    <?php foreach ($categories as $category): ?>
+    <?php foreach (array_slice($categories, 0, 4) as $category): ?>
       <div class="col-md-3 mb-4">
         <div class="card shadow-sm">
           <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="<?= esc($category['name']) ?>">
@@ -44,23 +44,13 @@
           <div class="card-body">
             <h5 class="card-title"><?= esc($book['title']) ?></h5>
             <p class="card-text"><?= esc($book['description']) ?></p>
-            <?php if ($book['avg_rating'] !== null): ?>
-              <p class="card-text">
-                <?php for ($i = 1; $i <= 5; $i++): ?>
-                  <i class="fas fa-star<?= $i <= $book['avg_rating'] ? ' text-warning' : '-half-alt text-warning' ?>"></i>
-                <?php endfor; ?>
-              </p>
-            <?php endif; ?>
+            <p class="card-text">
+              <?php for ($i = 1; $i <= 5; $i++): ?>
+                <i class="fas fa-star<?= $i <= $book['avg_rating'] ? ' text-warning' : '-half-alt text-warning' ?>"></i>
+              <?php endfor; ?>
+            </p>
             <a href="<?= site_url('project/books/view/'.$book['id']) ?>" class="btn btn-primary">View Details</a>
           </div>
-          <?php if (count($book['latest_reviews']) > 0): ?>
-            <div class="card-footer">
-              <h6>User Reviews:</h6>
-              <?php foreach ($book['latest_reviews'] as $review): ?>
-                <p><?= esc($review['comment']) ?></p>
-              <?php endforeach; ?>
-            </div>
-          <?php endif; ?>
         </div>
       </div>
     <?php endforeach; ?>
