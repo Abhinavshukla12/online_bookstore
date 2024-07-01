@@ -1,51 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootswatch Zephyr Theme CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/zephyr/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding-top: 4rem;
-        }
+<?= $this->extend('ProjectViews/layout/default') ?>
 
-        .form-container {
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-            padding: 2rem;
-        }
-
-        .form-container h2 {
-            margin-bottom: 2rem;
-        }
-
-        .form-control {
-            border-radius: 0.25rem;
-        }
-
-        .btn-primary {
-            border-radius: 0.25rem;
-            padding: 0.5rem 2rem;
-        }
-
-        @media (max-width: 576px) {
-            .form-container {
-                padding: 1rem;
-            }
-
-            .btn-primary {
-                padding: 0.5rem 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
+<?= $this->section('content') ?>
 <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -80,5 +35,35 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+    <style>
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+        }
+
+        .form-container h2 {
+            margin-bottom: 2rem;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .btn-primary {
+            border-radius: 0.25rem;
+            padding: 0.5rem 2rem;
+        }
+
+        @media (max-width: 576px) {
+            .form-container {
+                padding: 1rem;
+            }
+
+            .btn-primary {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+<?= $this->endSection() ?>
