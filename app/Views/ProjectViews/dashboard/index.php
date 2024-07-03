@@ -80,7 +80,3 @@
 
 </body>
 <?= $this->endSection() ?>
-
-<?= $this->section('styles') ?>
-
-<?= $this->endSection() ?>
