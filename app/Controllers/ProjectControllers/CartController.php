@@ -25,6 +25,9 @@ class CartController extends Controller
 
         // Prepare data to pass to the view
         $data['cartItems'] = $cartItems;
+        $data['css'] = [
+            'assets/css/cart/main.css',
+        ];
 
         // Load the cart view
         echo view('ProjectViews/cart/index', $data); // Assuming your cart view is named cart.php

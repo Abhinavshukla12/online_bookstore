@@ -39,6 +39,9 @@ class SearchController extends Controller
             $book['averageRating'] = $averageRating;
         }
 
-        return view('ProjectViews/search/search_results', ['results' => $results]);
+        $data['css'] = [
+            'assets/css/search/main.css'
+        ];
+        return view('ProjectViews/search/search_results', $data, ['results' => $results]);
     }
 }
