@@ -14,41 +14,10 @@
     <link href="<?= base_url('node_modules/bootswatch/dist/lux/bootstrap.min.css') ?>" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="<?= base_url('path/to/your/custom.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/layout/v1.0/main.css') ?>" rel="stylesheet">
 
     <style>
-      /* Custom CSS for resizing navbar */
-      .navbar {
-          padding: 0.5rem 1rem;
-      }
-
-      .navbar-brand {
-          margin-left: 20px;
-      }
-
-      .navbar-brand h2 {
-          font-size: 1.5rem;
-      }
-
-      .navbar-nav .nav-link {
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
-          white-space: nowrap;
-      }
-
-      .form-inline .form-control {
-          padding: 0.5rem;
-      }
-
-      .form-inline .btn {
-          padding: 0.5rem 1rem;
-      }
-
-      .form-inline {
-          margin-right: 20px;
-          flex-grow: 1;
-          justify-content: flex-end;
-      }
+      
     </style>
     <?php
     if (isset($css)) {

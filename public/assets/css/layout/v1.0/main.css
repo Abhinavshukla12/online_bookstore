@@ -1,0 +1,32 @@
+/* Custom CSS for resizing navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar-brand h2 {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.form-inline .form-control {
+    padding: 0.5rem;
+}
+
+.form-inline .btn {
+    padding: 0.5rem 1rem;
+}
+
+.form-inline {
+    margin-right: 20px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
