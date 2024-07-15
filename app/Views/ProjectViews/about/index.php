@@ -3,6 +3,8 @@
 <?= $this->section('title') ?>About Us<?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
+<body>
+<br>
 <div class="jumbotron">
     <p class="lead">Learn more about our online bookstore, our mission, vision, history, and team.</p>
 </div>
@@ -49,7 +51,7 @@
 </section>
 
 <section id="team" class="my-3">
-    <h3 class="text-primary">Meet Our Team</h3>
+    <h3 class="text-black">Meet Our Team</h3>
     <div class="row">
         <?php foreach ($team as $item): ?>
             <div class="col-md-4 mb-3">
@@ -65,7 +67,7 @@
 </section>
 
 <section id="contact" class="my-3">
-    <h3 class="text-primary">Contact Us</h3>
+    <h3 class="text-black">Contact Us</h3>
     <div class="row">
         <?php foreach ($contact as $item): ?>
             <?php if ($item['title'] == 'Email' || $item['title'] == 'Phone'): ?>
@@ -81,5 +83,21 @@
         <?php endforeach; ?>
     </div>
 </section>
-
+</body>
+<style>
+    body{
+        background-color: #7D8ABC;
+    }
+    .jumbotron{
+        max-height: 80px;
+        background-color: #FFF8DB;
+        color: black;
+        text-align: center;
+        padding: 1.5rem 0.6rem;
+        margin-bottom: 3rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+    }
+</style>
 <?= $this->endSection() ?>
