@@ -26,10 +26,6 @@ class AboutController extends BaseController
             'contact' => $aboutModel->getAboutSection('contact'),
         ];
 
-        $data['css']= [
-            'assets/css/about/main.css',
-        ];
-
         return view('ProjectViews/about/index', $data);
     }
 }
