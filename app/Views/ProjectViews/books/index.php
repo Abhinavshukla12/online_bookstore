@@ -1,6 +1,6 @@
 <?= $this->extend('ProjectViews/layout/default') ?>
 <?= $this->section('content') ?>
-
+<body>
 <?php if (session()->getFlashdata('success')): ?>
     <div class="alert alert-success">
         <?= session()->getFlashdata('success') ?>
@@ -10,9 +10,9 @@
 <h3 class="mb-3">Bestsellers</h3>
 <div class="row mb-5">
     <?php foreach ($bestsellers as $book): ?>
-        <div class="col-md-12 mb-4">
+        <div class="col-md-3 mb-4">
             <div class="card custom-card">
-                <div class="card-body">
+                <div class="card-body" style="background-color: #FFF8DB;">
                     <img src="<?= esc($book['image']) ?>" class="card-img-top" alt="<?= esc($book['title']) ?>">
                     <div class="card-details">
                         <h5 class="card-title"><?= esc($book['title']) ?></h5>
@@ -37,9 +37,9 @@
 <h3 class="mb-3">All Books</h3>
 <div class="row">
     <?php foreach ($books as $book): ?>
-        <div class="col-md-12 mb-4">
+        <div class="col-md-3 mb-4">
             <div class="card custom-card">
-                <div class="card-body">
+                <div class="card-body" style="background-color: #FFF8DB;">
                     <img src="<?= esc($book['image']) ?>" class="card-img-top" alt="<?= esc($book['title']) ?>">
                     <div class="card-details">
                         <h5 class="card-title"><?= esc($book['title']) ?></h5>
@@ -60,8 +60,11 @@
         </div>
     <?php endforeach; ?>
 </div>
-
+</body>
 <style>
+    body{
+        background-color: #7D8ABC;
+    }
     .custom-card {
         border: 1px solid #ccc;
         border-radius: 8px;
@@ -72,19 +75,21 @@
     .custom-card .card-body {
         padding: 0.75rem;
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .custom-card img {
-        width: 140px;
+        width: 100%;
         height: auto;
         object-fit: cover;
         border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     .custom-card .card-details {
         padding: 0.75rem;
-        flex: 1;
+        text-align: center;
     }
 
     .custom-card .card-title {

@@ -17,7 +17,15 @@
     <link href="<?= base_url('assets/css/layout/v1.0/main.css') ?>" rel="stylesheet">
 
     <style>
-      
+      nav{
+        background-color: #405D72;
+      }
+      .navbar-brand h2{
+        color: #fff;
+      }
+      .nav-link{
+        color: white;
+      }
     </style>
     <?php
     if (isset($css)) {
