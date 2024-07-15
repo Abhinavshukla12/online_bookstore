@@ -3,18 +3,18 @@
 <?= $this->section('content') ?>
 
 <style>
+    body{
+        background-color: #7D8ABC;
+    }
     /* Custom styles */
     .book-section {
-        background-color: #f9f9f9; /* Light background for book section */
+        background-color: #fff; /* Light background for book section */
         padding: 20px;
+        margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease-in-out;
-    }
-
-    .book-section:hover {
-        background-color: #f0f0f0; /* Darker background on hover */
     }
 
     .book-title {
@@ -24,15 +24,6 @@
 
     .book-details {
         padding: 20px;
-    }
-
-    .btn-purchase {
-        border-radius: 6px;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .btn-purchase:hover {
-        transform: scale(1.05); /* Scale up on hover */
     }
 
     .review-section {
@@ -59,9 +50,16 @@
     .add-review-section {
         margin-top: 20px;
         padding: 20px;
-        background-color: #f9f9f9; /* Light background for add review section */
+        background-color: white; /* Light background for add review section */
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #addtocart{
+        width: 130px;
+        height: 48px;
+        font-size: 0.9rem;
+        background-color: #DD5746;
     }
 
     .btn-show-more,
@@ -75,7 +73,7 @@
         margin-top: 10px;
     }
 </style>
-
+<body>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -92,17 +90,15 @@
                             <p><strong>Description:</strong> <?= esc($book['description']) ?></p>
                             <p><strong>Price:</strong> $<?= esc($book['price']) ?></p>
                             <p class="average-rating"><h4>Rating:</h4> <?= number_format($averageRating, 1) ?> / 5</p>
-                            <a href="<?= site_url('project/orders/payment/' . $book['id']) ?>" class="btn btn-success btn-purchase">Purchase</a>
+                            <a href="<?= site_url('project/orders/payment/' . $book['id']) ?>" style="background-color: #4793AF;" class="btn btn-primary btn-purchase">Purchase</a>
                             <form action="<?= site_url('project/cart/add') ?>" method="post" class="d-inline">
                                 <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
-                                <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
+                                <button type="submit" class="btn btn-primary btn-sm" id="addtocart">Add to Cart</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
             <div class="review-section">
                 <h3 class="review-title">Reviews</h3>
                 <?php if (session()->getFlashdata('success')): ?>
@@ -158,7 +154,8 @@
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
-
+        </div>
+        <div class="col-md-4">
             <div class="add-review-section">
                 <h4 class="mb-3">Add a Review</h4>
                 <form action="<?= site_url('project/reviews/add') ?>" method="post">
@@ -184,8 +181,9 @@
         </div>
     </div>
 
-    <a href="<?= site_url('project/books') ?>" class="btn btn-secondary mt-4">Back to Books Page</a>
-</div>
+    <a href="<?= site_url('project/books') ?>" class="btn btn-primary mt-4">Back to Books Page</a>
+</div> 
+</body>
 
 <script>
     // JavaScript to toggle visibility of additional reviews on "Show More" and "Show Less" button clicks
