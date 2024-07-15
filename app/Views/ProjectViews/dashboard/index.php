@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <body>
-
+<br>
 <!-- Hero Section -->
 <header class="banner" style="background-color: #758694;">
     <div class="banner-content text-center text-white py-5">
@@ -64,29 +64,39 @@
 
 <!-- Newsletter Subscription -->
 <section class="section-newsletter my-3">
-    <div class="container">
+    <div class="container"><br>
         <div class="jumbotron newsletter-jumbotron text-center p-5" style="background-color: #FFF8DB; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);">
             <h4 class="newsletter-title mb-3" style="font-size: 1.3rem;">Subscribe to our Newsletter</h4>
             <form class="newsletter-form form-inline justify-content-center">
                 <div class="form-group mb-2">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" class="form-control mr-2" id="email" placeholder="Enter your email">
+                    <input type="email" class="form-control mr-3" id="email" placeholder="Enter your email">
                 </div>
                 <button type="submit" class="btn btn-subscribe" style="font-size: 1rem;"><span>Subscribe</span></button>
             </form>
         </div>
-    </div>
+    </div><br>
 </section>
 
 </body>
 
 <style>
     body{
-        background-color: #304463;
+        background-color: #7D8ABC;
     }
     .form-control{
-        font-size: 0.9rem;
-        background-color: #405D72;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        background-color: #fff;
+    }
+    .btn-subscribe{
+        background-color: #DD5746;
+        color: #fff;
+    }
+    .container{
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 </style>
 <?= $this->endSection() ?>
