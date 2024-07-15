@@ -3,9 +3,11 @@
 <?= $this->section('content') ?>
 
 <style>
+    body{
+        background-color: #7D8ABC;
+    }
     /* Advanced CSS styles */
     .custom-card {
-        background-color: #f8f9fa; /* Light grey background */
         border: 1px solid #dee2e6; /* Light grey border */
         transition: transform 0.3s ease-in-out;
     }
@@ -29,7 +31,8 @@
         color: #6c757d; /* Grey text color */
     }
 </style>
-
+<body>
+    <br>
 <h4>Categories</h4>
 
 <?php if (session()->getFlashdata('error')) : ?>
@@ -43,7 +46,7 @@
 <div class="row">
     <?php foreach ($categories as $category) : ?>
         <div class="col-md-3 col-lg-3 mb-4">
-            <div class="card custom-card" style="background-color: #facbc8;">
+            <div class="card custom-card" style="background-color: #F7E7DC;">
                 <div class="card-body">
                     <h5 class="card-title"><a href="<?= site_url('project/category/' . $category['id']) ?>"><?= esc($category['name']) ?></a></h5>
                     <p class="card-text text-primary-emphasis"><?= esc($category['description']) ?></p>
@@ -51,6 +54,7 @@
             </div>
         </div>
     <?php endforeach; ?>
-</div>
+</div>    
+</body>
 
 <?= $this->endSection() ?>
