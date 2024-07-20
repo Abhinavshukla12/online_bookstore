@@ -31,12 +31,12 @@
         </div>
         <div class="spacer"></div> <!-- Spacer div for gap -->
         <div class="button-container-right">
+            <h3>Edit Profile</h3>
             <button class="profile-button">Button 1</button>
             <button class="profile-button">Button 2</button>
             <button class="profile-button">Button 3</button>
             <button class="profile-button">Button 4</button>
             <button class="profile-button">Button 5</button>
-            <button class="profile-button">Button 6</button>
         </div>
     </div>    
 </body>
@@ -100,19 +100,24 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        margin-top: 25px;
+        background-color: white;
+        padding: 20px;
+        max-width: 300px;
+        width: 100%;
     }
     .profile-button {
-        padding: 10px 20px;
+        padding: 10px 40px;
         border: none;
-        border-radius: 5px;
-        background-color: #007bff;
+        border-radius: 8px;
+        background-color: red;
         color: #fff;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
     .profile-button:hover {
-        background-color: #0056b3;
+        background-color: black;
     }
     .spacer {
         width: 30px; /* Spacer width for the gap */
